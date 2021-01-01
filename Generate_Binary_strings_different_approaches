@@ -1,10 +1,16 @@
 n = int(input())
 x = []
 for i in range(2**n):
-    x.append(bin(i).replace("0b",""))
+    ans = (bin(i).replace("0b",""))
+    if len(ans) < 3:
+        x.append((n-len(ans))*"0" + ans)
+    else:
+        x.append(ans)
     
 print(x)
 
 //
-Output : n = 3
-['0','1','10','11','100','101','110','111']
+Output : n = 2
+['00','01','10','11]
+n = 3
+['000','001','010','011','100','101','110','111']
