@@ -1,0 +1,10 @@
+n = int(input())
+x = []
+for i in range(2**n):
+    x.append(bin(i).replace("0b",""))
+    
+print(x)
+
+//
+Output : n = 3
+['0','1','10','11','100','101','110','111']
